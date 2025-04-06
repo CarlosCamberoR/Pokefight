@@ -40,7 +40,7 @@ Alternatively, if you're using Eclipse:
 1. Import the project into Eclipse
 2. Right-click on the project
 3. Select "Run As" > "Java Application"
-4. Select the main class (likely "connectNeo")
+4. Select the main class
 
 ## Features
 - Pokemon battle simulation
