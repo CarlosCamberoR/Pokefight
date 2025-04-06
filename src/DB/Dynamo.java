@@ -58,20 +58,12 @@ public class Dynamo {
 
 		ScanResult result = client.scan(scanRequest);
 		for (Map<String, AttributeValue> item : result.getItems()) {
-			// Pokemon pokemon = new Pokemon();
-			// pokemon.setEspecie(item.get("Pokemon").getS());
-			// persona.setApellido(item.get("apellido").getS());
-			// persona.setEdad(Integer.parseInt(item.get("edad").getN()));
 			pokemons.addElement(item.get("Pokemon").getS());
 		}
 		while (result.getLastEvaluatedKey() != null) {
 			scanRequest.setExclusiveStartKey(result.getLastEvaluatedKey());
 			result = client.scan(scanRequest);
 			for (Map<String, AttributeValue> item : result.getItems()) {
-				// Pokemon pokemon = new Pokemon();
-				// pokemon.setEspecie(item.get("Pokemon").getS());
-				// persona.setApellido(item.get("apellido").getS());
-				// persona.setEdad(Integer.parseInt(item.get("edad").getN()));
 				pokemons.addElement(item.get("Pokemon").getS());
 			}
 		}

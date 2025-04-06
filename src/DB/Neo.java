@@ -47,7 +47,6 @@ public class Neo implements AutoCloseable {
 
 	}
 
-	// TODO
 	// Comprueba si existe un entrenador y si no existe lo crea
 	public boolean existeEntrenador(final String nombre) {
 		boolean existe = true;
